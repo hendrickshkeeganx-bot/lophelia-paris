@@ -84,22 +84,6 @@ h1,h2,h3{
     color: #c8a46b;
 }
 
-/* 移动端响应式 */
-@media(max-width:768px){
-    .header {
-        flex-direction: column;  /* LOGO 与导航上下排列 */
-        padding: 20px;
-        text-align: center;
-    }
-
-    .header ul {
-        margin-top: 15px;
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}
-
 /* =========================
    Hero
 ========================= */
