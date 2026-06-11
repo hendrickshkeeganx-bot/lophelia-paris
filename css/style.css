@@ -66,6 +66,9 @@ h1,h2,h3{
 .header ul{
     display:flex;
     gap:40px;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
 }
 
 .header a{
