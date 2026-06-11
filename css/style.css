@@ -42,44 +42,62 @@ h1,h2,h3{
    Header
 ========================= */
 
-.header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:999;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:25px 80px;
-    background:rgba(255,255,255,0.95);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid rgba(0,0,0,.05);
+.header {
+    display: flex;
+    justify-content: space-between; /* 左右分开 */
+    align-items: center;            /* 上下居中 */
+    padding: 25px 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0,0,0,.05);
 }
 
-.logo{
-    font-size:28px;
-    letter-spacing:4px;
-    font-family:'Cormorant Garamond',serif;
+.logo {
+    font-size: 28px;
+    letter-spacing: 4px;
+    font-family: 'Cormorant Garamond', serif;
+    display: flex;
+    align-items: center; /* LOGO 上下居中 */
 }
 
-.header ul{
-    display:flex;
-    gap:40px;
-    justify-content:center;
-    align-items:center;
-    flex-wrap:wrap;
+.header ul {
+    display: flex;
+    gap: 40px;
+    align-items: center; /* 导航菜单上下居中 */
+    margin: 0;
+    padding: 0;
 }
 
-.header a{
-    color:#111;
-    font-size:14px;
-    letter-spacing:1px;
-    transition:.3s;
+.header a {
+    color: #111;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: .3s;
 }
 
-.header a:hover{
-    color:#c8a46b;
+.header a:hover {
+    color: #c8a46b;
+}
+
+/* 移动端响应式 */
+@media(max-width:768px){
+    .header {
+        flex-direction: column;  /* LOGO 与导航上下排列 */
+        padding: 20px;
+        text-align: center;
+    }
+
+    .header ul {
+        margin-top: 15px;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
 /* =========================
@@ -696,28 +714,5 @@ margin-bottom:20px;
         align-items:center;
         width:100%;
     }
-
-}
-
-.hero h1{
-font-size:42px;
-}
-
-.about{
-grid-template-columns:1fr;
-}
-
-.expertise-grid{
-grid-template-columns:1fr;
-}
-
-.collection-grid{
-grid-template-columns:1fr;
-}
-
-.numbers{
-grid-template-columns:1fr;
-gap:40px;
-}
 
 }
