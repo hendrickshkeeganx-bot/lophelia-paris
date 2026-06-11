@@ -684,19 +684,19 @@ margin-bottom:20px;
 }
 
 /* Mobile */
-
 @media(max-width:768px){
 
-.header{
-padding:20px;
-flex-direction:column;
-}
+    .header{
+        flex-direction:column;
+        text-align:center;
+    }
 
-.header ul{
-margin-top:15px;
-gap:15px;
-flex-wrap:wrap;
-justify-content:center;
+    .header ul{
+        justify-content:center;
+        align-items:center;
+        width:100%;
+    }
+
 }
 
 .hero h1{
