@@ -41,47 +41,36 @@ h1,h2,h3{
 /* =========================
    Header
 ========================= */
-
 .header {
     display: flex;
-    justify-content: space-between; /* 左右分开 */
-    align-items: center;            /* 上下居中 */
-    padding: 25px 80px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 999;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(0,0,0,.05);
+    flex-direction: column;        /* 改成列布局 */
+    justify-content: center;       /* 垂直居中两行 */
+    align-items: center;           /* 水平居中 */
+    height: 120px;                 /* header 高度，可调整 */
+    padding:20px 2px;
 }
 
 .logo {
-    font-size: 28px;
-    letter-spacing: 4px;
-    font-family: 'Cormorant Garamond', serif;
-    display: flex;
-    align-items: center; /* LOGO 上下居中 */
+    font-size: 30px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;           /* 两行间距 */
 }
 
 .header ul {
     display: flex;
-    gap: 40px;
-    align-items: center; /* 导航菜单上下居中 */
-    margin: 0;
-    padding: 0;
+    gap: 15px;
+    align-items: center;           /* 保证导航文字上下居中 */
 }
 
-.header a {
-    color: #111;
-    font-size: 14px;
-    letter-spacing: 1px;
-    transition: .3s;
+.header a{
+    color:#111;
+    font-size:14px;
+    letter-spacing:1px;
+    transition:.3s;
 }
 
-.header a:hover {
-    color: #c8a46b;
+.header a:hover{
+    color:#c8a46b;
 }
 
 /* =========================
@@ -302,7 +291,6 @@ h1,h2,h3{
         font-size:18px;
     }
 }
-
 /* =========================
    Numbers
 ========================= */
@@ -511,192 +499,3 @@ footer p{
 
 }
 ```
-
-
-.hero{
-height:100vh;
-position:relative;
-overflow:hidden;
-}
-
-.hero img{
-height:100%;
-object-fit:cover;
-}
-
-.hero-content{
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-text-align:center;
-color:white;
-}
-
-.hero h1{
-font-size:90px;
-letter-spacing:8px;
-}
-
-.hero p{
-font-size:20px;
-margin:20px 0;
-}
-
-.btn{
-display:inline-block;
-padding:15px 40px;
-border:1px solid white;
-color:white;
-transition:.3s;
-}
-
-.btn:hover{
-background:white;
-color:black;
-}
-
-/* About */
-
-.about{
-padding:120px 10%;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:80px;
-align-items:center;
-}
-
-.about span{
-letter-spacing:3px;
-font-size:12px;
-color:#999;
-}
-
-.about h2{
-font-size:55px;
-margin:20px 0;
-}
-
-.about p{
-color:#666;
-}
-
-/* Expertise */
-
-.expertise{
-padding:120px 10%;
-background:#f8f8f8;
-text-align:center;
-}
-
-.expertise h2{
-font-size:60px;
-margin-bottom:60px;
-}
-
-.expertise-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:30px;
-}
-
-.card{
-background:white;
-padding:50px 30px;
-}
-
-.card h3{
-font-size:30px;
-margin-bottom:20px;
-}
-
-/* Collections */
-
-.collections{
-padding:120px 10%;
-text-align:center;
-}
-
-.collections h2{
-font-size:60px;
-margin-bottom:60px;
-}
-
-.collection-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:30px;
-}
-
-.item h3{
-margin-top:20px;
-font-size:32px;
-}
-
-/* Numbers */
-
-.numbers{
-background:#111;
-color:white;
-padding:100px 10%;
-display:grid;
-grid-template-columns:repeat(4,1fr);
-text-align:center;
-}
-
-.numbers h3{
-font-size:70px;
-}
-
-/* CTA */
-
-.cta{
-padding:120px 10%;
-text-align:center;
-background:#f5f5f5;
-}
-
-.cta h2{
-font-size:60px;
-margin-bottom:20px;
-}
-
-.cta .btn{
-color:black;
-border-color:black;
-}
-
-.cta .btn:hover{
-background:black;
-color:white;
-}
-
-/* Footer */
-
-footer{
-background:#111;
-color:white;
-text-align:center;
-padding:80px 20px;
-}
-
-footer h3{
-font-size:40px;
-margin-bottom:20px;
-}
-
-/* Mobile */
-@media(max-width:768px){
-
-    .header{
-        flex-direction:column;
-        text-align:center;
-    }
-
-    .header ul{
-        justify-content:center;
-        align-items:center;
-        width:100%;
-    }
-
-}
